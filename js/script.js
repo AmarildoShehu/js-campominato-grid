@@ -14,18 +14,22 @@ const row = 10;
 const cols= 10;
 const totCells= row * cols;
 
-// creo costante per dare istruzioni al button e bloccare cn piu click
-let createGrid = false
+// creo costante per dare istruzioni al button e bloccare dopo il click
+let createGrid = false;
+ //costante numeri
+ let cellCount = 1;
 
 //funzione al click
 playButton.addEventListener('click', function() {
     if (!createGrid) {
+
 //ciclo per creare le cell
         for (let i = 0; i < totCells; i++) {
             const cell = document.createElement('div');
             cell.className = 'cell';
-
+            cell.textContent = cellCount;
             grid.appendChild(cell);
+            cellCount++;            
         }
         createGrid = true;
     }
