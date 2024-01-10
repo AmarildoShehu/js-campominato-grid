@@ -23,5 +23,6 @@
 }
 
 .cell.clicked{
-    background-color: blue;
+    background-color: darkgoldenrod;
+    color: white;
 }
