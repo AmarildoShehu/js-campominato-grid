@@ -23,13 +23,24 @@ let createGrid = false;
 playButton.addEventListener('click', function() {
     if (!createGrid) {
 
-//ciclo per creare le cell
+//ciclo per creare le cell numerate
         for (let i = 0; i < totCells; i++) {
             const cell = document.createElement('div');
             cell.className = 'cell';
+
             cell.textContent = cellCount;
+            cellCount++;     
+
             grid.appendChild(cell);
-            cellCount++;            
+
+            //Evenet listner click celle
+            cell.addEventListener('click', function(event) {
+                const clickedCell = event.target;
+                const cellNumber = clickedCell.textContent;
+                console.log("Hai cliccato sulla cella: " + cellNumber);
+                clickedCell.classList.add('clicked')
+            });
+                   
         }
         createGrid = true;
     }
