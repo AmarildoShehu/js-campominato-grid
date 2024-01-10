@@ -1,0 +1,14 @@
+
+
+/* grid style */
+#grid{
+    width: 600px;
+    height: 600px;
+    background-color: burlywood;
+    margin: 20px auto;
+}
+
+/* cell style */
+#cell{
+    
+}
