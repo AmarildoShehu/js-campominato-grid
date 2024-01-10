@@ -2,13 +2,23 @@
 
 /* grid style */
 #grid{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
     width: 600px;
     height: 600px;
-    background-color: burlywood;
+    background-color: aquamarine;
     margin: 20px auto;
 }
 
 /* cell style */
-#cell{
-    
+.cell{
+    cursor: pointer;
+    width: calc(100% / 10); 
+    height: calc(100% / 10);
+    border: 1px solid black;
+}
+
+.cell.clicked{
+    background-color: blue;
 }
